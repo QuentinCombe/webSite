@@ -1,0 +1,700 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Quentin Combemorel</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<link href="timeline2/timeline2/one-page-wonder.css" rel="stylesheet">
+		<style>
+			img {
+				vertical-align: middle;
+			}
+
+			.img-responsive {
+				display: block;
+				height: auto;
+				max-width: 100%;
+			}
+
+			.img-rounded {
+				border-radius: 3px;
+			}
+
+			.img-thumbnail {
+				background-color: #fff;
+				border: 1px solid #ededf0;
+				border-radius: 3px;
+				display: inline-block;
+				height: auto;
+				line-height: 1.428571429;
+				max-width: 100%;
+				moz-transition: all .2s ease-in-out;
+				o-transition: all .2s ease-in-out;
+				padding: 2px;
+				transition: all .2s ease-in-out;
+				webkit-transition: all .2s ease-in-out;
+			}
+
+			.img-circle {
+				border-radius: 50%;
+			}
+
+			.timeline-centered {
+				position: relative;
+				margin-bottom: 30px;
+			}
+
+			.timeline-centered:before,
+			.timeline-centered:after {
+				content: " ";
+				display: table;
+			}
+
+			.timeline-centered:after {
+				clear: both;
+			}
+
+			.timeline-centered:before,
+			.timeline-centered:after {
+				content: " ";
+				display: table;
+			}
+
+			.timeline-centered:after {
+				clear: both;
+			}
+
+			.timeline-centered:before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 2px;
+				background: #061B25;
+				/*left: 50%;*/
+				top: 20px;
+				bottom: 20px;
+				margin-left: 30px;
+			}
+
+			.timeline-centered .timeline-entry {
+				position: relative;
+				/*width: 50%;
+            float: right;*/
+				margin-top: 5px;
+				margin-left: 30px;
+				margin-bottom: 10px;
+				clear: both;
+			}
+
+			.timeline-centered .timeline-entry:before,
+			.timeline-centered .timeline-entry:after {
+				content: " ";
+				display: table;
+			}
+
+			.timeline-centered .timeline-entry:after {
+				clear: both;
+			}
+
+			.timeline-centered .timeline-entry:before,
+			.timeline-centered .timeline-entry:after {
+				content: " ";
+				display: table;
+			}
+
+			.timeline-centered .timeline-entry:after {
+				clear: both;
+			}
+
+			.timeline-centered .timeline-entry.begin {
+				margin-bottom: 0;
+			}
+
+			.timeline-centered .timeline-entry.left-aligned {
+				float: left;
+			}
+
+			.timeline-centered .timeline-entry.left-aligned .timeline-entry-inner {
+				margin-left: 0;
+				margin-right: -18px;
+			}
+
+			.timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-time {
+				left: auto;
+				right: -100px;
+				text-align: left;
+			}
+
+			.timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-icon {
+				float: right;
+			}
+
+			.timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label {
+				margin-left: 0;
+				margin-right: 70px;
+			}
+
+			.timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label:after {
+				left: auto;
+				right: 0;
+				margin-left: 0;
+				margin-right: -9px;
+				-moz-transform: rotate(180deg);
+				-o-transform: rotate(180deg);
+				-webkit-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner {
+				position: relative;
+				margin-left: -20px;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner:before,
+			.timeline-centered .timeline-entry .timeline-entry-inner:after {
+				content: " ";
+				display: table;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner:after {
+				clear: both;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner:before,
+			.timeline-centered .timeline-entry .timeline-entry-inner:after {
+				content: " ";
+				display: table;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner:after {
+				clear: both;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-time {
+				position: absolute;
+				left: -100px;
+				text-align: right;
+				padding: 10px;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span {
+				display: block;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span:first-child {
+				font-size: 15px;
+				font-weight: bold;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span:last-child {
+				font-size: 12px;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-school {
+				background: #C83336;
+				color: #fff;
+				display: block;
+				width: 40px;
+				height: 40px;
+				-webkit-background-clip: padding-box;
+				-moz-background-clip: padding;
+				background-clip: padding-box;
+				-webkit-border-radius: 20px;
+				-moz-border-radius: 20px;
+				border-radius: 20px;
+				text-align: center;
+				-moz-box-shadow: 0 0 0 5px #f5f5f6;
+				-webkit-box-shadow: 0 0 0 5px #f5f5f6;
+				box-shadow: 0 0 0 2px #fff;
+				line-height: 40px;
+				font-size: 20px;
+				float: left;
+				font-family: FontAwesome;
+			}
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-work {
+				background: #648A8C;
+				color: #fff;
+				display: block;
+				width: 40px;
+				height: 40px;
+				-webkit-background-clip: padding-box;
+				-moz-background-clip: padding;
+				background-clip: padding-box;
+				-webkit-border-radius: 20px;
+				-moz-border-radius: 20px;
+				border-radius: 20px;
+				text-align: center;
+				-moz-box-shadow: 0 0 0 5px #f5f5f6;
+				-webkit-box-shadow: 0 0 0 5px #f5f5f6;
+				box-shadow: 0 0 0 2px #fff;
+				line-height: 40px;
+				font-size: 20px;
+				float: left;
+				font-family: FontAwesome;
+			}
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
+				position: relative;
+				background: #f5f5f6;
+				padding: 1em;
+				margin-left: 60px;
+				-webkit-background-clip: padding-box;
+				-moz-background-clip: padding;
+				background-clip: padding-box;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 9px 9px 9px 0;
+				border-color: transparent #f5f5f6 transparent transparent;
+				left: 0;
+				top: 10px;
+				margin-left: -9px;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2,
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p {
+				color: #737881;
+				font-family: "Noto Sans", sans-serif;
+				font-size: 12px;
+				margin: 0;
+				line-height: 1.428571429;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p + p {
+				margin-top: 15px;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 {
+				font-size: 16px;
+				margin-bottom: 10px;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 a {
+				color: #303641;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 span {
+				-webkit-opacity: .6;
+				-moz-opacity: .6;
+				opacity: .6;
+				-ms-filter: alpha(opacity=60);
+				filter: alpha(opacity=60);
+			}
+		</style>
+
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner align-center">
+					<a href="#" class="image avatar"><img src="images/profil.jpg" alt="" /></a>
+					<h1>Quentin Combemorel</h1>
+					<p> Elève ingénieur en informatique</p>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>À propos de moi</h2>
+						</header>
+						<p>Je suis Quentin Combemorel, je suis actuellement étudiant en école d'ingénieurs en informatique.
+							J'effectue ma dernière année dans ce cursus à l'école Polytechnique de Tours. J'ai choisi le domaine de l'informatique, car c'est un domaine qui est omniprésent dans notre vie
+							de tous les jours.
+							Pour moi connaître ce domaine est un atout majeur dans le monde d'aujourd'hui qui en est de plus en plus dépendant.
+							Outre l'informatique, le sport, le voyage, l'audiovisuel sont mes principales occupations.</p>
+						<ul class="actions align-center">
+							<li><a href="#school" class="button">Mon parcours</a></li>
+							<li><a href="#interest" class="button">Mes centres d'intérêts</a></li>
+							<li><a href="#experience" class="button">Mes expériences</a></li>
+						</ul>
+					</section>
+				<section id="school">
+					<div class="align-center">
+						<h2>Mon parcours</h2>
+						<header>
+							<h3><a class="icon fa-graduation-cap"></a> Diplôme d'ingénieur en informatique</h3>
+							<p> 2014 - 2017 : Polytech Tours département informatique, France</p>
+						</header>
+						<header>
+							<h3><a class="icon fa-graduation-cap"></a>DUT Services et Réseaux de Communication</h3>
+							<p> 2012 - 2014 : IUT d'Allier, Vichy, France </p>
+						</header>
+						<header>
+							<h3><a class="icon fa-graduation-cap"></a> Bac Scientifique</h3>
+							<p> 2012 : Lycée Pierre Emile Martin - Bourges, France</p>
+						</header>
+					</div>
+				</section>
+
+				<section class="" id="experience">
+					<header>
+						<h1>Mes expériences</h1>
+					</header>
+					<div class="row">
+						<div class="timeline-centered">
+							<article class="timeline-entry">
+								<div class="timeline-entry-inner">
+									<div class="timeline-school fa-university">
+										<i class="entypo-feather"></i>
+									</div>
+									<div class="timeline-label">
+										<h2>Projet en équipe, plateforme de reconnaissance d'émotion </h2>
+										<i> <a class="icon fa-calendar"></a>Septembre 2016 - Janvier 2017<br>
+											<a class="icon fa-globe"></a>Tours, France </i>
+										<p>
+											Développement d'une application web de reconnaissances d'émotions destinée à un cadre universitaire. Utilisation de Spring Boot et d'Angular JS.
+										</p>
+									</div>
+								</div>
+							</article>
+							<article class="timeline-entry">
+								<div class="timeline-entry-inner">
+									<div class="timeline-school fa-university">
+										<i class="entypo-feather"></i>
+									</div>
+									<div class="timeline-label">
+										<h2>Projet de fin d'étude </h2>
+										<i> <a class="icon fa-calendar"></a>Septembre 2016 - En cours<br>
+											<a class="icon fa-globe"></a>Tours, France </i>
+										<p>
+											Le but du projet est d'évaluer et améliorer un outil permettant de faire des recherches dans des documents numérisés.
+											Une première partie consistera à faire un état de l'art sur des technique de segmentation et d'exctraction de données. Puis une deuxième
+											 partie où il faudra mettre en place les concepts découvert lors de l'état de l'art.
+											Les développements sont fait en C# majoritairement.
+										</p>
+									</div>
+								</div>
+							</article>
+							<article class="timeline-entry">
+								<div class="timeline-entry-inner">
+									<div class="timeline-work fa-briefcase">
+										<i class="entypo-feather"></i>
+									</div>
+									<div class="timeline-label">
+										<h2>Stage de 4ème année, Umanis </h2>
+										<i> <a class="icon fa-calendar"></a>Juin 2016 - Septembre 2016 <br>
+											<a class="icon fa-globe"></a>Tours, France </i>
+										<p>
+											Intégration d'une équipe dans le pôle CRM. Phase de montée en compétence sur l'outil E-Deal. Développement Java EE.
+											Participation aux activités de spécifications fonctionnelles, conception technique, développements (paramétrage et
+											spécifique), assistance à la recette (aide à la maîtrise d’ouvrage, correction d’anomalies), packaging de livrable et assistance à la mise en production.
+										</p>
+									</div>
+								</div>
+							</article>
+							<article class="timeline-entry">
+								<div class="timeline-entry-inner">
+									<div class="timeline-school fa-university">
+										<i class="entypo-feather"></i>
+									</div>
+									<div class="timeline-label">
+										<h2>Projet en équipe, Application IOS TiChef</h2>
+										<i> <a class="icon fa-calendar"></a>Janvier 2016 - Mai 2016<br>
+											<a class="icon fa-globe"></a>Tours, France </i>
+										<p>
+
+											Développement d’une application pour Ipad, pour le CHRU Bretonneau de Tours. L’application sera utilisée lors de séance par le CHRU avec des groupes
+											d’enfants atteints d’autisme. Le jeu consiste à simuler le déroulement d'une recette. Application developpée en Swift.
+
+										</p>
+									</div>
+								</div>
+							</article>
+							<article class="timeline-entry">
+								<div class="timeline-entry-inner">
+									<div class="timeline-work fa-briefcase">
+										<i class="entypo-suitcase"></i>
+									</div>
+									<div class="timeline-label">
+										<h2>Cours particulier </h2>
+										<i> <a class="icon fa-calendar"></a>Juin 2015 - en cours <br>
+											<a class="icon fa-globe"></a>Sancerre, France </i>
+										<p> Cours particulier, conseil en informatique le plus souvent à des personnes âgée cherchant à maitriser leur ordinateur.
+											Bureautique (Word, Excel, PowerPoint), conseils de tous genre liés à leur environnement, montage vidéos, photos</p>
+									</div>
+								</div>
+							</article>
+							<article class="timeline-entry">
+								<div class="timeline-entry-inner">
+									<div class="timeline-work fa-briefcase">
+										<i class="entypo-location"></i>
+									</div>
+									<div class="timeline-label">
+										<h2> Stage de dernière année DUT, DevCSI </h2>
+										<i> <a class="icon fa-calendar"></a>Avril 2014 - Juin 2014 <br>
+											<a class="icon fa-globe"></a>Cosne sur Loire, France </i>
+										<p>Création d'un site internet pour l'entreprise DevCSI, ainsi que toute la refonte de leur charte graphique. Cette dernière impliquait le logo, des cartes de
+											visite, des formats standards de documents Word et PowerPoint. Je me suis également occupé de tout l'aspect E-réputation, Community management, vidéo de
+											présentation des services proposés par DevCSI.
+											Enfin, dans le cadre de ce stage, j'ai également développé un nouveau site pour le club de basket de Cosne sur Loire.</p>
+									</div>
+								</div>
+							</article>
+							<article class="timeline-entry">
+								<div class="timeline-entry-inner">
+									<div class="timeline-work fa-briefcase">
+										<i class="entypo-camera"></i>
+									</div>
+									<div class="timeline-label">
+										<h2>Stage de 4ème année, Umanis </h2>
+										<i> <a class="icon fa-calendar"></a>Juin 2016 - Septembre 2016 <br>
+											<a class="icon fa-globe"></a>Tours, France </i>
+										<p>
+											Intégration d'une équipe dans le pôle CRM. Phase de montée en compétence sur l'outil E-Deal. Développement Java EE.
+											Participation aux activités de spécifications fonctionnelles, conception technique, développements (paramétrage et
+											spécifique), assistance à la recette (aide à la maîtrise d’ouvrage, correction d’anomalies), packaging de livrable et assistance à la mise en production.
+										</p>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+				</section>
+
+				<!--<section id="experience">-->
+					<!--<div class="align-center">-->
+						<!--<h2>Mes expériences</h2>-->
+						<!--<header>-->
+							<!--<h3><a class="icon fa-briefcase"></a> Stage de 4ème année, Umanis </h3>-->
+							<!--<i> <a class="icon fa-calendar"></a>Juin 2016 - Septembre 2016 <br>-->
+								<!--<a class="icon fa-globe"></a>Tours, France </i>-->
+							<!--<p>Intégration d'une équipe dans le pôle CRM. Phase de montée en compétence sur l'outil E-Deal. Développement Java EE.-->
+								<!--Participation aux activités de spécifications fonctionnelles, conception technique, développements (paramétrage et-->
+								<!--spécifique), assistance à la recette (aide à la maîtrise d’ouvrage, correction d’anomalies), packaging de livrable et assistance à la mise en production.-->
+							<!--</p>-->
+						<!--</header>-->
+						<!--<br>-->
+						<!--<header>-->
+							<!--<h3><a class="icon fa-briefcase"></a> Cours particulier</h3>-->
+							<!--<i> <a class="icon fa-calendar"></a>Juin 2015 - Aujourd'hui <br>-->
+								<!--<a class="icon fa-globe"></a>Sancerre, France </i>-->
+							<!--<p> Cours particulier, conseil en informatique le plus souvent à des personnes âgée cherchant à maitriser leur ordinateur.-->
+							<!--Bureautique (Word, Excel, PowerPoint), conseils de tous genre liés à leur environnement, montage vidéos, photos</p>-->
+						<!--</header>-->
+						<!--<header>-->
+							<!--<h3><a class="icon fa-briefcase"></a> Stage de dernière années DUT, DevCSI</h3>-->
+							<!--<i> <a class="icon fa-calendar"></a>Avril 2014 - Juin 2014 <br>-->
+								<!--<a class="icon fa-globe"></a>Cosne sur Loire, France </i>-->
+							<!--<p>Création d'un site internet pour l'entreprise DevCSI, ainsi que toute la refonte de leur charte graphique. Cette dernière impliquait le logo, des cartes de-->
+								<!--visite, des formats standards de documents Word et PowerPoint. Je me suis également occupé de tout l'aspect E-réputation, Community management, vidéo de-->
+								<!--présentation des services proposés par DevCSI.-->
+								<!--Enfin, dans le cadre de ce stage, j'ai également développé un nouveau site pour le club de basket de Cosne sur Loire.</p>-->
+						<!--</header>-->
+						<!--<header>-->
+							<!--<h3><a class="icon fa-briefcase"></a> Agent de mise en rayon, Auchan</h3>-->
+							<!--<i> <a class="icon fa-calendar"></a>Juillet 2011 - Août 2011<br>-->
+								<!--<a class="icon fa-globe"></a>Cosne sur Loire, France </i>-->
+						<!--</header>-->
+						<!--<br>-->
+						<!--<header>-->
+							<!--<h3><a class="icon fa-briefcase"></a>Accolage, Robineau</h3>-->
+							<!--<i> <a class="icon fa-calendar"></a>été 2009 - 2013<br>-->
+								<!--<a class="icon fa-globe"></a>Sancerre, France </i>-->
+						<!--</header>-->
+
+						<!--<ul class="actions vertical">-->
+							<!--<li><a href="#interest" class="button big wide smooth-scroll-middle">Mes centres d'intérêts</a></li>-->
+						<!--</ul>-->
+					<!--</div>-->
+				<!--</section>-->
+
+				<section id="interest">
+					<div class="wrapper style2 align-center" >
+						<header>
+							<h1>Mes centres d'intérêts</h1>
+						</header>
+						<div class="items">
+							<section>
+								<h1 class="icon major fa-dribbble"><br>Sport</h1>
+								<p>Le sport je le pratique depuis tout petit. En effet j'ai commencé très jeune à faire du <strong>Basket</strong>, dans
+									ce sport j'y est connu presque tout les niveaux : Départementale, Régionale et nationale. Cela m'a permis de
+									développer quelques facettes de ma personnalité, comme la perseverance ou encore l'esprit d'équipe et de compétition.
+									Depuis 2012, je pratique le <strong> Freeline </strong>, et depuis 2015 la <strong> musculation </strong>. Ce dernier m'a apporter beaucoup de chose
+									notamment dans la façon de vivre. Indirectement je me suis également intéressé de très près à la nutrition afin d'optimiser
+									mes entrainements et de surcroit mes résultats.
+								</p>
+							</section>
+							<section>
+								<h1 class="icon major fa-globe"> <br> Voyage</h1>
+								<p>J'ai developpé une pation du voyage depuis que je suis allé en Angleterre. Cela me permet de me vider l'esprit, rencontrer d'autre culture, d'autre façon de vivre.
+									Voyager permet de se rendre compte des choses importantes de la vie et celle qui le sont moins, mais qui peuvent nous tracasser au quotidien.
+									Angleterre, Espagne, Pologne, Ecosse font parties de mes destinations. En attendant les prochaines...
+								</p>
+							</section>
+							<section>
+								<h1 class="icon major fa-camera"> <br> Audiovisuel</h1>
+								<p>Comme l'informatique j'ai découvert ce domaine lors de mon cursus en DUT, depuis je continu de le pratiquer et d'apprendre. Par audiovisuel j'entends la photo et la vidéo.
+									Ce domaine permet de m'exprimer. J'ai renforcé cette pation avec le voyage.
+									En effet, c'est lors de mes voyages que j'effectue le plus de photos, mais également de la vidéo afin de me fabriquer des souvenir mais également partager ceux-ci avec mes proches.</p>
+							</section>
+							<section>
+								<h1 class="icon major fa-laptop"> <br>Informatique</h1>
+								<p> J'ai commencé à m'intéressé au domaine de l'informatique lorsque j'étais en DUT. Depuis je continu d'apprendre et de découvir beaucoup de chose dans
+									l'informatique. Ce domaine est fascinant a mes yeux dans
+									le sens ou il est présent partout dans la vie de tous les jours. Pour moi connaitre ce domaine est un atout majeur dans le monde d'aujourd'hui qui de
+									plus en plus en dépend. Grâce à ma formation j'ai pu découvrir et pratiquer pas mal de domaine. Aujourd'hui les domaine que j'affectionne particulièrement
+									sont le developpement d'application JAVA, le développement mobile et le Web</p>
+							</section>
+						</div>
+					</div>
+				</section>
+
+
+
+
+				<!-- Two -->
+					<section id="two">
+						<h2>Portfolio</h2>
+						<div class="row">
+							<article class="6u 12u$(xsmall) work-item">
+								<a href="images/fulls/1.jpg" class="image fit thumb"><img src="images/thumbs/1.jpg" alt="" /></a>
+							</article>
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="images/fulls/2.jpg" class="image fit thumb"><img src="images/thumbs/2.jpg" alt="" /></a>
+							</article>
+							<article class="6u 12u$(xsmall) work-item">
+								<a href="images/fulls/3.jpg" class="image fit thumb"><img src="images/thumbs/3.jpg" alt="" /></a>
+							</article>
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="images/fulls/4.jpg" class="image fit thumb"><img src="images/thumbs/4.jpg" alt="" /></a>
+							</article>
+							<article class="6u 12u$(xsmall) work-item">
+								<a href="images/fulls/5.jpg" class="image fit thumb"><img src="images/thumbs/5.jpg" alt="" /></a>
+							</article>
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="images/fulls/6.jpg" class="image fit thumb"><img src="images/thumbs/6.jpg" alt="" /></a>
+							</article>
+							<article class="6u 12u$(xsmall) work-item">
+								<a href="images/fulls/7.jpg" class="image fit thumb"><img src="images/thumbs/7.jpg" alt="" /></a>
+							</article>
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="images/fulls/8.jpg" class="image fit thumb"><img src="images/thumbs/8.jpg" alt="" /></a>
+							</article>
+							<article class="6u 12u$(xsmall) work-item">
+								<a href="images/fulls/9.jpg" class="image fit thumb"><img src="images/thumbs/9.jpg" alt="" /></a>
+							</article>
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="images/fulls/10.jpg" class="image fit thumb"><img src="images/thumbs/10.jpg" alt="" /></a>
+							</article>
+							<article class="6u 12u$(xsmall) work-item">
+								<a href="images/fulls/11.jpg" class="image fit thumb"><img src="images/thumbs/11.jpg" alt="" /></a>
+							</article>
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="images/fulls/12.jpg" class="image fit thumb"><img src="images/thumbs/12.jpg" alt="" /></a>
+							</article>
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="images/fulls/13.jpg" class="image fit thumb"><img src="images/thumbs/13.jpg" alt="" /></a>
+							</article>
+						</div>
+						<ul class="actions">
+							<li><a href="https://www.flickr.com/photos/143512491@N02/" class="button">Plus de photos</a></li>
+						</ul>
+					</section>
+
+				<!-- Four -->
+				<!--<section id="test">-->
+					<!--<div id="timeline" class="timeline-container">-->
+						<!--<div class="timeline-wrapper">-->
+							<!--<h2 class="timeline-time">1976</h2>-->
+
+							<!--<dl class="timeline-series">-->
+
+								<!--<dt class="timeline-event" id="event01"><a>Event</a></dt>-->
+								<!--<dd class="timeline-event-content" id="event01EX">-->
+									<!--<p>Content about the event goes here.</p>-->
+								<!--</dd>-->
+
+								<!--<dt class="timeline-event" id="event02"><a>Another Event</a></dt>-->
+								<!--<dd class="timeline-event-content" id="event02EX">-->
+									<!--<p>Content about the other event.</p>-->
+								<!--</dd>-->
+
+							<!--</dl>-->
+						<!--</div>-->
+						<!--<div class="timeline-wrapper">-->
+							<!--<h2 class="timeline-time">1984</h2>-->
+
+							<!--<dl class="timeline-series">-->
+
+								<!--<dt class="timeline-event" id="event03"><a>Yet Another Event</a></dt>-->
+								<!--<dd class="timeline-event-content" id="event03EX">-->
+									<!--<p>Content about the event goes here.</p>-->
+								<!--</dd>-->
+
+							<!--</dl>-->
+						<!--</div>-->
+						<!--<br class="clear">-->
+					<!--</div>-->
+
+
+				<!--</section>-->
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons align-center">
+						<li><a href="https://www.facebook.com/quentin.combemorel" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://twitter.com/Quentin_Comb" class="icon fa-twitter"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.linkedin.com/in/quentincombemorel" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/QuentinCombe" class="icon fa-github"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://www.instagram.com/quenti_comb/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://www.flickr.com/photos/143512491@N02/" class="icon fa-flickr"><span class="label">Email</span></a></li>
+						<li>
+							<a class="icon fa-envelope" href="mailto:quentin.combemorel@hotmail.fr"></a>
+						</li>
+						<hr>
+						<li>
+							<a class="icon fa-mobile"><span class="label">Phone</span></a>
+							 <br>+33 6 26 53 26 57
+						</li>
+						<li>
+							<a href="" class="icon fa-download" download="CV-Quentin-Combemorel.pdf"> <br>Télécharger mon CV</a>
+						</li>
+					</ul>
+					<!--<ul class="icons align-left">-->
+
+					<!--</ul>-->
+					<ul class="copyright align-center">
+						<li>Copyright &copy; Quentin Combemorel - 2017</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
